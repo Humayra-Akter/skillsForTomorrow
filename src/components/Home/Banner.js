@@ -10,7 +10,7 @@ const Banner = () => {
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
 
   const redirectToAllJobs = () => {
-    if (loggedInUser && loggedInUser.userType === "buyer") {
+    if (loggedInUser && loggedInUser.userType === "instructor") {
       navigate("/allJobs");
     } else {
       navigate("/login");

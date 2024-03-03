@@ -27,19 +27,19 @@ const Navbar = () => {
           <Link className="pr-10" to="/about">
             <button>About</button>
           </Link>
-          {userType === "seller" && (
-            <Link to="/sellerDashboard">
-              <button className="pr-10">Seller-Dashboard</button>
+          {userType === "student" && (
+            <Link to="/studentDashboard">
+              <button className="pr-10">Student-Dashboard</button>
             </Link>
           )}
-          {userType === "buyer" && (
+          {userType === "" && (
             <Link to="/allJobs">
               <button className="pr-10">Search-Job</button>
             </Link>
           )}
           {loggedInUser ? (
             <button className="pr-10" onClick={handleSignOut}>
-              Sign-out
+              Signout
             </button>
           ) : (
             <Link to="/register">
