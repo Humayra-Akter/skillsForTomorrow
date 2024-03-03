@@ -9,6 +9,7 @@ const generateRandomColor = () => {
   }
   return color;
 };
+
 const generateRandomColorWithDuration = (duration) => {
   const letters = "0123456789ABCDEF";
   let color = "#";
@@ -20,118 +21,162 @@ const generateRandomColorWithDuration = (duration) => {
 
 const Districts = () => {
   const navigate = useNavigate();
-  const divisions = {
-    Dhaka: {
-      subDivisions: [
+  const modules = {
+    Cooking: {
+      submodule: [
         {
-          name: "Dhaka North",
-          areas: ["Area A", "Area B", "Area C"],
+          name: "Beginner",
+          relevantCourses: [
+            "Cooking Basics",
+            "Food Preparation Fundamentals",
+            "Kitchen Safety",
+          ],
         },
         {
-          name: "Dhaka South",
-          areas: ["Area X", "Area Y", "Area Z"],
-        },
-      ],
-    },
-    Chattogram: {
-      subDivisions: [
-        {
-          name: "Chattogram North",
-          areas: ["Area P", "Area Q", "Area R"],
-        },
-        {
-          name: "Chattogram South",
-          areas: ["Area M", "Area N", "Area O"],
+          name: "Advanced",
+          relevantCourses: [
+            "Gourmet Cooking",
+            "International Cuisine",
+            "Pastry Arts",
+          ],
         },
       ],
     },
-    Barishal: {
-      subDivisions: [
+    Basic_Computer: {
+      submodule: [
         {
-          name: "Barishal North",
-          areas: ["Area P", "Area Q", "Area R"],
+          name: "Beginner",
+          relevantCourses: [
+            "Computer Basics",
+            "Introduction to Operating Systems",
+            "Word Processing",
+          ],
         },
         {
-          name: "Barishal South",
-          areas: ["Area M", "Area N", "Area O"],
-        },
-      ],
-    },
-    Khulna: {
-      subDivisions: [
-        {
-          name: "Khulna North",
-          areas: ["Area P", "Area Q", "Area R"],
-        },
-        {
-          name: "Khulna South",
-          areas: ["Area M", "Area N", "Area O"],
+          name: "Advanced",
+          relevantCourses: [
+            "Data Structures",
+            "Web Development",
+            "Networking Fundamentals",
+          ],
         },
       ],
     },
-    Rajshahi: {
-      subDivisions: [
+    Art_and_Craft: {
+      submodule: [
         {
-          name: "Rajshahi North",
-          areas: ["Area P", "Area Q", "Area R"],
+          name: "Beginner",
+          relevantCourses: [
+            "Drawing Fundamentals",
+            "Painting Techniques",
+            "Crafting Essentials",
+          ],
         },
         {
-          name: "Rajshahi South",
-          areas: ["Area M", "Area N", "Area O"],
-        },
-      ],
-    },
-    Rangpur: {
-      subDivisions: [
-        {
-          name: "Rangpur North",
-          areas: ["Area P", "Area Q", "Area R"],
-        },
-        {
-          name: "Rangpur South",
-          areas: ["Area M", "Area N", "Area O"],
+          name: "Advanced",
+          relevantCourses: [
+            "Sculpture Design",
+            "Mixed Media Art",
+            "Textile Arts",
+          ],
         },
       ],
     },
-    Mymensingh: {
-      subDivisions: [
+    Hairdressing_and_Beauty_Therapy: {
+      submodule: [
         {
-          name: "Mymensingh North",
-          areas: ["Area P", "Area Q", "Area R"],
+          name: "Beginner",
+          relevantCourses: [
+            "Haircutting Basics",
+            "Salon Management Fundamentals",
+            "Skin Care Essentials",
+          ],
         },
         {
-          name: "Mymensingh South",
-          areas: ["Area M", "Area N", "Area O"],
+          name: "Advanced",
+          relevantCourses: [
+            "Advanced Styling Techniques",
+            "Aromatherapy",
+            "Cosmetic Chemistry",
+          ],
         },
       ],
     },
-    Sylhet: {
-      subDivisions: [
+    Electrical_and_Plumbing_Skills: {
+      submodule: [
         {
-          name: "Sylhet North",
-          areas: ["Area P", "Area Q", "Area R"],
+          name: "Beginner",
+          relevantCourses: [
+            "Electrical Wiring Basics",
+            "Plumbing Fundamentals",
+            "Safety Protocols",
+          ],
         },
         {
-          name: "Sylhet South",
-          areas: ["Area M", "Area N", "Area O"],
+          name: "Advanced",
+          relevantCourses: [
+            "Renewable Energy Systems",
+            "Advanced Plumbing Techniques",
+            "Building Automation",
+          ],
+        },
+      ],
+    },
+    Entrepreneurship_and_Financial_Literacy: {
+      submodule: [
+        {
+          name: "Beginner",
+          relevantCourses: [
+            "Business Planning",
+            "Financial Management Fundamentals",
+            "Marketing Essentials",
+          ],
+        },
+        {
+          name: "Advanced",
+          relevantCourses: [
+            "Strategic Management",
+            "Investment Analysis",
+            "E-Commerce Strategies",
+          ],
+        },
+      ],
+    },
+    Tailoring_and_sewing: {
+      submodule: [
+        {
+          name: "Beginner",
+          relevantCourses: [
+            "Sewing Basics",
+            "Pattern Making Fundamentals",
+            "Fabric Selection",
+          ],
+        },
+        {
+          name: "Advanced",
+          relevantCourses: [
+            "Couture Techniques",
+            "Advanced Draping",
+            "Tailored Garment Construction",
+          ],
         },
       ],
     },
   };
 
-  const [showDivisions, setShowDivisions] = useState({});
-  const [showSubDivisions, setShowSubDivisions] = useState({});
+  const [showModules, setShowModules] = useState({});
+  const [showSubmodules, setShowSubmodules] = useState({});
 
-  const handleMouseEnter = (division) => {
-    setShowDivisions((prev) => ({ ...prev, [division]: true }));
+  const handleMouseEnter = (module) => {
+    setShowModules((prev) => ({ ...prev, [module]: true }));
   };
 
-  const handleMouseLeave = (division) => {
-    setShowDivisions((prev) => ({ ...prev, [division]: false }));
-    setShowSubDivisions((prev) => ({ ...prev, [division]: null }));
+  const handleMouseLeave = (module) => {
+    setShowModules((prev) => ({ ...prev, [module]: false }));
+    setShowSubmodules((prev) => ({ ...prev, [module]: null }));
   };
 
-  const handleAreaClick = (division, subDivision, area) => {
+  const handleCourseClick = (module, submodule, course) => {
     navigate(`/freeFeatures`);
   };
 
@@ -141,13 +186,13 @@ const Districts = () => {
         Find Through Your Area
       </h2>
 
-      <div className="grid grid-cols-4 items-center justify-center text-center mt-10">
-        {Object.keys(divisions).map((division) => (
+      <div className="grid grid-cols-4 gap-4 items-center justify-center text-center mt-10">
+        {Object.keys(modules).map((module) => (
           <div
-            key={division}
+            key={module}
             className="p-4"
-            onMouseEnter={() => handleMouseEnter(division)}
-            onMouseLeave={() => handleMouseLeave(division)}
+            onMouseEnter={() => handleMouseEnter(module)}
+            onMouseLeave={() => handleMouseLeave(module)}
           >
             <div
               className="p-2 h-56 rounded-md overflow-hidden relative"
@@ -158,49 +203,49 @@ const Districts = () => {
             >
               <button
                 className={`text-white font-bold ${
-                  showDivisions[division] ? "text-2xl" : "text-4xl"
+                  showModules[module] ? "text-2xl" : "text-xl"
                 }`}
               >
-                {division}
+                {module}
               </button>
-              {showDivisions[division] && (
+              {showModules[module] && (
                 <div className="mt-2">
-                  {divisions[division].subDivisions.map((subDivision) => (
+                  {modules[module].submodule.map((submodule) => (
                     <div
-                      key={subDivision.name}
+                      key={submodule.name}
                       className="mt-2"
                       onMouseEnter={() =>
-                        setShowSubDivisions((prev) => ({
+                        setShowSubmodules((prev) => ({
                           ...prev,
-                          [division]: subDivision.name,
+                          [module]: submodule.name,
                         }))
                       }
                       onMouseLeave={() =>
-                        setShowSubDivisions((prev) => ({
+                        setShowSubmodules((prev) => ({
                           ...prev,
-                          [division]: null,
+                          [module]: null,
                         }))
                       }
                     >
                       <button className="text-gray-200">
-                        {subDivision.name}
+                        {submodule.name}
                       </button>
-                      {showSubDivisions[division] === subDivision.name && (
+                      {showSubmodules[module] === submodule.name && (
                         <div>
                           <button className="mt-2">
-                            {subDivision.areas.map((area) => (
+                            {submodule.relevantCourses.map((course) => (
                               <div
-                                key={area}
+                                key={course}
                                 className="mt-2 text-slate-300"
                                 onClick={() =>
-                                  handleAreaClick(
-                                    division,
-                                    subDivision.name,
-                                    area
+                                  handleCourseClick(
+                                    module,
+                                    submodule.name,
+                                    course
                                   )
                                 }
                               >
-                                {area}
+                                {course}
                               </div>
                             ))}
                           </button>

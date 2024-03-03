@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
-import logo from "../../images/logo.png";
 
 const Navbar = () => {
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -18,9 +17,7 @@ const Navbar = () => {
     <div className="bg-primary text-white font-bold">
       <div className="navbar sticky">
         <div className="navbar-start">
-          <Link to="/">
-            <img className="ml-10 w-36" src={logo} alt="" />
-          </Link>
+          <Link to="/"></Link>
         </div>
 
         <div className="navbar-end pr-10">
