@@ -1,0 +1,68 @@
+{
+  "basic_computer": {
+    "word": {
+      "details": {
+        "beginner": {
+          "class_1": {
+            "vdo": "https://www.youtube.com/embed/SKBKprxDR-Y?si=4FQyVj2UFEMEu7ZS",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/ms-word-mcq/1-6914/",
+            "practice": "practice_url"
+          },
+          "class_2": {
+            "vdo": "https://www.youtube.com/embed/aLBr-lYTDug?si=iuyTyVUmFxjvyKrS",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/ms-word-tutorials/1-6915/",
+            "practice": "practice_url"
+          },
+          "class_3": {
+            "vdo": "https://www.youtube.com/embed/9KRSIjDbIjY?si=cDJy4e5QcmlQAZHR",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/ms-word-questions/1-6916/",
+            "practice": "practice_url"
+          }
+        },
+        "intermediate": {
+          "class_1": {
+            "vdo": "https://www.youtube.com/embed/InybiNuUA8g?si=7s0_UmgUNqBcJQ5q",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/ms-word-pdf/1-6917/",
+            "practice": "practice_url"
+          },
+          "class_2": {
+            "vdo": "https://www.youtube.com/embed/CHsLs7Qoqzc?si=Hb6hUENDaVagOsbm",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/ms-word-notes/1-76889/",
+            "practice": "practice_url"
+          },
+          "class_3": {
+            "vdo": "https://www.youtube.com/embed/tLt4Bcp98Wo?si=3sFiWTRwTuxJnRFi",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/ms-office-quiz/1-76890/",
+            "practice": "practice_url"
+          }
+        },
+        "advanced": {
+          "class_1": {
+            "vdo": "https://www.youtube.com/embed/hzhoqvvNEeQ?si=XAyaBvK7CEFt-252",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/ms-office-mcq/1-76891/",
+            "practice": "practice_url"
+          },
+          "class_2": {
+            "vdo": "https://www.youtube.com/embed/nPrDnrQ-igQ?si=cgmgc31o1z5v-_R4",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/msword-practical-viva-quiz/1-77193/",
+            "practice": "practice_url"
+          },
+          "class_3": {
+            "vdo": "https://www.youtube.com/embed/BCCr1pWeigc?si=xtc3LUyuri0fivn-",
+            "notes": "notes_file_url",
+            "quiz": "https://meritnotes.com/computer-quiz/msword-viva-questions/1-77194/",
+            "practice": "practice_url"
+          }
+        }
+      }
+    }
+  }
+}
