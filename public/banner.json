@@ -1,0 +1,31 @@
+{
+  "banner": [
+    {
+      "title": "Welcome to Our Vocational Training Program",
+      "subtitle": "Empowering Youth for a Better Future",
+      "image": "./images/1.jpg",
+      "cta": {
+        "text": "Get Started",
+        "link": "/get-started"
+      }
+    },
+    {
+      "title": "Limited Time Offer!",
+      "subtitle": "Enroll Now and Get 50% Off on Course Fees",
+      "image": "./images/2.jpg",
+      "cta": {
+        "text": "Enroll Now",
+        "link": "/enroll"
+      }
+    },
+    {
+      "title": "Join Us for Our Annual Youth Summit",
+      "subtitle": "Discover Opportunities, Network, and Shape the Future",
+      "image": "./images/3.jpg",
+      "cta": {
+        "text": "Learn More",
+        "link": "/event-details"
+      }
+    }
+  ]
+}

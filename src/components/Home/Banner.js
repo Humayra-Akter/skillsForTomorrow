@@ -17,9 +17,9 @@ const Banner = () => {
     }
   };
   useEffect(() => {
-    fetch("./jobAnnouncement.json")
+    fetch("./banner.json")
       .then((res) => res.json())
-      .then((data) => setJobAnnouncements(data.jobAnnouncements || []));
+      .then((data) => setJobAnnouncements(data.banner || []));
   }, []);
 
   const renderJobAnnouncements = () => {
@@ -29,16 +29,14 @@ const Banner = () => {
           className="w-full h-96 bg-cover bg-center"
           style={{ backgroundImage: `url(${job.image})` }}
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-black to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-800 to-transparent"></div>
         </div>
         <div className="absolute inset-0 flex items-center justify-center">
           <div className="text-white text-center">
             <h2 className="text-3xl font-bold mb-2">{job.title}</h2>
-            <p className="text-lg mb-4">{job.description}</p>
-            <p className="text-base">Location: {job.location}</p>
-            <p className="text-base">Company: {job.company}</p>
-            <p className="text-base">Posted Date: {job.postedDate}</p>
-            <p className="text-base">Expiration Date: {job.expirationDate}</p>
+            <p className="text-lg mb-4">{job.subtitle}</p>
+            <p className="text-base">Location: {job.cta.text}</p>
+
             {loggedInUser ? (
               <Link
                 to="/allJobs"

@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-primary text-white font-bold">
+    <div className="bg-gradient-to-r from-primary to-secondary  text-black font-bold">
       <div className="navbar sticky">
         <div className="navbar-start">
           <Link to="/"></Link>

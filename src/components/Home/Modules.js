@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
+import bg from "../../images/bg.png";
 
 const generateRandomColor = () => {
   const letters = "0123456789ABCDEF";
@@ -19,7 +20,7 @@ const generateRandomColorWithDuration = (duration) => {
   return `color ${duration}s ease, background-color ${duration}s ease`;
 };
 
-const Districts = () => {
+const Modules = () => {
   const navigate = useNavigate();
   const modules = {
     Cooking: {
@@ -183,10 +184,10 @@ const Districts = () => {
   return (
     <div>
       <h2 className="text-3xl text-primary font-bold mt-20 text-center">
-        Find Through Your Area
+        Find Through Your Interest
       </h2>
 
-      <div className="grid grid-cols-4 gap-4 items-center justify-center text-center mt-10">
+      <div className="grid lg:grid-cols-3 gap-4 items-center justify-center text-center mt-10">
         {Object.keys(modules).map((module) => (
           <div
             key={module}
@@ -196,13 +197,14 @@ const Districts = () => {
           >
             <div
               className="p-2 h-56 rounded-md overflow-hidden relative"
-              style={{
-                backgroundColor: generateRandomColor(),
-                transition: generateRandomColorWithDuration(10),
-              }}
+              style={{ backgroundImage: `url(${bg})`, backgroundSize: "cover" }}
+              // style={{
+              //   backgroundColor: generateRandomColor(),
+              //   transition: generateRandomColorWithDuration(10),
+              // }}
             >
               <button
-                className={`text-white font-bold ${
+                className={`text-black font-bold ${
                   showModules[module] ? "text-2xl" : "text-xl"
                 }`}
               >
@@ -227,7 +229,7 @@ const Districts = () => {
                         }))
                       }
                     >
-                      <button className="text-gray-200">
+                      <button className="text-gray-900 font-semibold">
                         {submodule.name}
                       </button>
                       {showSubmodules[module] === submodule.name && (
@@ -236,7 +238,7 @@ const Districts = () => {
                             {submodule.relevantCourses.map((course) => (
                               <div
                                 key={course}
-                                className="mt-2 text-slate-300"
+                                className="mt-2 text-slate-800"
                                 onClick={() =>
                                   handleCourseClick(
                                     module,
@@ -263,4 +265,4 @@ const Districts = () => {
   );
 };
 
-export default Districts;
+export default Modules;

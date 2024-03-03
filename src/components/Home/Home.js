@@ -1,12 +1,12 @@
 import React from "react";
 import Banner from "./Banner";
-import Districts from "./Districts";
+import Modules from "./Modules";
 
 const Home = () => {
   return (
     <>
       <Banner />
-      <Districts />
+      <Modules />
     </>
   );
 };
