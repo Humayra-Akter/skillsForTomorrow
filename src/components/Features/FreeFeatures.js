@@ -2,21 +2,14 @@ import React from "react";
 import { useParams, Link } from "react-router-dom";
 
 const featuresData = {
-  localMarket: "Local Market",
-  megaShopInfo: "Mega Shop Info",
-  localJamUpdate: "Local Jam Update",
-  cngPumpStation: "CNG, pump station",
-  religiousPlaces: "Religious places",
-  educationalInstitutions: "Educational Institutions",
-  playingGrounds: "Playing grounds",
-  upcomingEvents: "Upcoming events in locality",
-  plotInfo: "Plot buy, sell, or rent information",
-  localFoodCart: "Local Food cart",
-  parkingArea: "Parking Area",
-  hospitals: "Hospitals",
-  wasteDisposalInfo: "Local Waste disposal Info",
-  deliveryHub: "Delivery Hub Information (Daraz, Pathao)",
-  jobVacancy: "Job Vacancy news",
+  tailoringAndSewing: "Tailoring and sewing",
+  cooking: "Cooking",
+  basicComputer: "Basic Computer",
+  artAndCraft: "Art and Craft",
+  hairdressingAndBeautyTherapy: "Hairdressing and Beauty Therapy",
+  electricalAndPlumbingSkills: "Electrical and Plumbing Skills",
+  entrepreneurshipAndFinancialLiteracy:
+    "Entrepreneurship and Financial Literacy",
 };
 
 const FreeFeatures = () => {
@@ -26,7 +19,7 @@ const FreeFeatures = () => {
     ([feature, description]) => (
       <div
         key={feature}
-        className="my-4 mx-2 w-80 p-3 bg-white border border-primary rounded-md shadow-md"
+        className="my-4 mx-2 w-80 p-3 bg-gradient-to-r from-pink-200 to-yellow-100 text-black border border-primary rounded-md shadow-md"
       >
         <Link to={`/${feature.replace(/\s/g, "-")}`}>
           <p className="text-center text-primary font-bold">{description}</p>
@@ -37,11 +30,14 @@ const FreeFeatures = () => {
 
   return (
     <div>
-      <p className="text-center text-primary font-bold text-3xl my-6">
-        Free Features
+      <p className="text-center text-primary uppercase font-bold text-3xl my-6">
+        Features
       </p>
-      <div className="px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="px-20 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4 gap-4">
         {featureBoxes}
+        {/* Adding empty grid items to adjust the layout */}
+        <div className="hidden lg:block xl:hidden"></div>
+        <div className="hidden xl:block"></div>
       </div>
     </div>
   );
