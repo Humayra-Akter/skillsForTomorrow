@@ -1,4 +1,6 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import avatar from "../../images/8.jpg";
 import {
   PieChart,
   Pie,
@@ -75,8 +77,13 @@ const StudentDashboard = () => {
       <div className="flex justify-between items-center mb-8">
         {/* Avatar and name */}
         <div className="flex items-center">
-          <div className="w-16 h-16 bg-gray-300 rounded-full mr-4"></div>
-          <h1 className="text-xl font-bold">John Doe</h1>
+          <div className="w-16 h-16 bg-gray-300 rounded-full mr-4">
+            <img
+              src={avatar}
+              className="w-16 h-16 bg-gray-300 rounded-full mr-4"
+            />
+          </div>
+          <h1 className="text-xl font-bold">Rahim Uddin</h1>
         </div>
 
         {/* Percentage counter */}
@@ -266,14 +273,17 @@ const StudentDashboard = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {/* Add cards for notes */}
           {/* Example:  */}
-          <div className="bg-pink-400 text-white rounded-lg p-4">
-            <h2 className="text-lg font-semibold mb-2">
-              {" "}
-              Microsoft Word Class Notes
-            </h2>
-            <p className="text-sm">Content of Word class notes</p>
-            <p className="text-sm">Content of note 1</p>{" "}
-          </div>{" "}
+          <Link to="/yourNotes">
+            {" "}
+            <div className="bg-pink-400 text-white rounded-lg p-4">
+              <h2 className="text-lg font-semibold mb-2">
+                {" "}
+                Microsoft Word Class Notes
+              </h2>
+              <p className="text-sm">Content of Word class notes</p>
+              <p className="text-sm">Content of note 1</p>{" "}
+            </div>
+          </Link>{" "}
           <div className="bg-amber-500 text-white rounded-lg p-4">
             <h2 className="text-lg font-semibold mb-2">
               {" "}
