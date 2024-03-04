@@ -12,6 +12,7 @@ import BasicComputer from "./components/Features/BasicComputer";
 import InstructorDashboard from "./components/SellerDashboard/InstructorDashboard";
 import AddInstitution from "./components/SellerDashboard/AddInstitution";
 import JobAnnounce from "./components/SellerDashboard/JobAnnounce";
+import StudentDashboard from "./components/Dashboard/StudentDashboard";
 
 function App() {
   return (
@@ -23,12 +24,16 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
         <Route path="/applyForJob/:jobId" element={<ApplyForJob />} />
+
         <Route path="/instructorDashboard" element={<InstructorDashboard />} />
         {/* instructor dashboard  */}
         <Route path="/instructorDashboard" element={<InstructorDashboard />}>
           <Route index element={<AddInstitution />}></Route>
           <Route path="jobAnnounce" element={<JobAnnounce />}></Route>
         </Route>
+
+        <Route path="/studentDashboard" element={<StudentDashboard />} />
+
         <Route path="/freeFeatures" element={<FreeFeatures />} />
         <Route path="/basicComputer" element={<BasicComputer />} />
         <Route
