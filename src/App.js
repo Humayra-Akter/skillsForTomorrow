@@ -13,6 +13,7 @@ import InstructorDashboard from "./components/SellerDashboard/InstructorDashboar
 import AddInstitution from "./components/SellerDashboard/AddInstitution";
 import JobAnnounce from "./components/SellerDashboard/JobAnnounce";
 import StudentDashboard from "./components/Dashboard/StudentDashboard";
+import YourNotes from "./components/Dashboard/YourNotes";
 
 function App() {
   return (
@@ -33,6 +34,7 @@ function App() {
         </Route>
 
         <Route path="/studentDashboard" element={<StudentDashboard />} />
+        <Route path="/yourNotes" element={<YourNotes />} />
 
         <Route path="/freeFeatures" element={<FreeFeatures />} />
         <Route path="/basicComputer" element={<BasicComputer />} />

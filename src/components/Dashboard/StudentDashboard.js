@@ -11,6 +11,7 @@ import {
   CartesianGrid,
   Tooltip,
   Legend,
+  Cell,
 } from "recharts";
 
 const StudentDashboard = () => {
@@ -37,9 +38,13 @@ const StudentDashboard = () => {
   ];
 
   const schedule = [
-    { time: "10:00 AM", class: "Tailoring and Sewing" },
-    { time: "2:00 PM", class: "Cooking" },
-    { time: "4:00 PM", class: "Basic Computer" },
+    { time: "10:00 AM", class: "Tailoring and Sewing", day: 7 },
+    { time: "2:00 PM", class: "Cooking", day: 9 },
+    { time: "4:00 PM", class: "Basic Computer", day: 12 },
+  ];
+  const missedSchedule = [
+    { time: "10:00 AM", class: "Tailoring and Sewing", day: 6 },
+    { time: "4:00 PM", class: "Basic Computer", day: 1 },
   ];
 
   const getBackgroundColor = (day) => {
@@ -62,6 +67,8 @@ const StudentDashboard = () => {
         return "";
     }
   };
+
+  const COLORS = ["#8884d8", "#82ca9d", "#ffc658", "#ff7f0e"]; // Define colors array
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -111,7 +118,7 @@ const StudentDashboard = () => {
         </div>
       </div>
       {/* Cards for courses */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 mb-28">
         {courses.map((course, index) => (
           <div
             key={index}
@@ -131,32 +138,52 @@ const StudentDashboard = () => {
         ))}
       </div>
       {/* Graphs */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 mb-28">
         {/* Pie chart */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Quiz Result</h2>
+          <h2 className="text-lg text-center text-primary font-bold mb-4">
+            Quiz Result
+          </h2>
           <PieChart width={400} height={400}>
-            <Pie dataKey="score" data={quizResultData} fill="#8884d8" label />
+            <Pie dataKey="score" data={quizResultData} label>
+              {quizResultData.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Pie>
             <Tooltip />
           </PieChart>
         </div>
 
         {/* Bar chart */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Class Performance</h2>
+          <h2 className="text-lg text-center text-primary font-bold  mb-4">
+            Class Performance
+          </h2>
           <BarChart width={400} height={400} data={classPerformanceData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
             <Legend />
-            <Bar dataKey="attendance" fill="#82ca9d" />
+            <Bar dataKey="attendance" fill="#8884d8">
+              {classPerformanceData.map((entry, index) => (
+                <Cell
+                  key={`cell-${index}`}
+                  fill={COLORS[index % COLORS.length]}
+                />
+              ))}
+            </Bar>
           </BarChart>
         </div>
 
         {/* Line chart */}
         <div>
-          <h2 className="text-lg font-semibold mb-4">Quiz Result</h2>
+          <h2 className="text-lg text-center text-primary font-bold mb-4">
+            Quiz Result
+          </h2>
           <LineChart width={400} height={400} data={quizResultData}>
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis dataKey="name" />
@@ -167,32 +194,18 @@ const StudentDashboard = () => {
           </LineChart>
         </div>
       </div>
-      {/* Schedule */}
-      <div className="bg-gray-100 p-4 rounded-lg">
-        <h2 className="text-lg font-semibold mb-4">Upcoming Classes</h2>
-        <ul>
-          {schedule.map((item, index) => (
-            <li key={index} className="flex items-center mb-2">
-              <div className="w-4 h-4 bg-blue-500 rounded-full mr-2"></div>
-              <p>
-                {item.time} - {item.class}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
 
-      {/* calender  */}
-      {/* <div className="bg-gray-100 p-4 rounded-lg">
+      {/* Schedule */}
+      <div className="bg-gray-100 p-4 rounded-lg mb-28">
         <h2 className="text-lg font-semibold mb-4">Upcoming Classes</h2>
         <div className="grid grid-cols-7 gap-1">
-          <div className="text-center font-semibold">Sun</div>
-          <div className="text-center font-semibold">Mon</div>
-          <div className="text-center font-semibold">Tue</div>
-          <div className="text-center font-semibold">Wed</div>
-          <div className="text-center font-semibold">Thu</div>
-          <div className="text-center font-semibold">Fri</div>
-          <div className="text-center font-semibold">Sat</div>
+          <div className="text-center bg-red-200 font-semibold">Sun</div>
+          <div className="text-center bg-orange-200 font-semibold">Mon</div>
+          <div className="text-center bg-teal-200 font-semibold">Tue</div>
+          <div className="text-center bg-fuchsia-200 font-semibold">Wed</div>
+          <div className="text-center bg-emerald-200 font-semibold">Thu</div>
+          <div className="text-center bg-lime-200 font-semibold">Fri</div>
+          <div className="text-center bg-amber-200 font-semibold">Sat</div>
           {Array.from({ length: 31 }, (_, index) => index + 1).map((day) => (
             <div
               key={day}
@@ -213,7 +226,79 @@ const StudentDashboard = () => {
             </div>
           ))}
         </div>
-      </div> */}
+      </div>
+
+      {/* History */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-28">
+        <div className="bg-gray-100 p-4 rounded-lg">
+          <h2 className="text-lg font-semibold mb-4">Attendance History</h2>
+          {schedule.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center mb-2 bg-green-200 p-2 rounded-md"
+            >
+              <div className="w-4 h-4 bg-green-500 rounded-full mr-2"></div>
+              <p>
+                {item.time} - {item.class}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div className="bg-gray-100 p-4 rounded-lg">
+          <h2 className="text-lg font-semibold mb-4">Missed Classes History</h2>
+          {missedSchedule.map((item, index) => (
+            <div
+              key={index}
+              className="flex items-center mb-2 bg-red-200 p-2 rounded-md"
+            >
+              <div className="w-4 h-4 bg-green-500 rounded-full mr-2"></div>
+              <p>
+                {item.time} - {item.class}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Your Notes */}
+      <div className="bg-gray-100 p-4 rounded-lg mb-28">
+        <h2 className="text-lg font-semibold mb-4">Your Notes</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+          {/* Add cards for notes */}
+          {/* Example:  */}
+          <div className="bg-pink-400 text-white rounded-lg p-4">
+            <h2 className="text-lg font-semibold mb-2">
+              {" "}
+              Microsoft Word Class Notes
+            </h2>
+            <p className="text-sm">Content of Word class notes</p>
+            <p className="text-sm">Content of note 1</p>{" "}
+          </div>{" "}
+          <div className="bg-amber-500 text-white rounded-lg p-4">
+            <h2 className="text-lg font-semibold mb-2">
+              {" "}
+              Microsoft Word Class Notes
+            </h2>
+            <p className="text-sm">Content of Word class notes</p>
+            <p className="text-sm">Content of note 2</p>{" "}
+          </div>{" "}
+          <div className="bg-purple-500 text-white rounded-lg p-4">
+            <h2 className="text-lg font-semibold mb-2">
+              {" "}
+              Microsoft Word Class Notes
+            </h2>
+            <p className="text-sm">Content of Word class notes</p>
+            <p className="text-sm">Content of note 3</p>
+          </div>
+          <div className="bg-blue-500 text-white rounded-lg p-4">
+            <h2 className="text-lg font-semibold mb-2">
+              Microsoft Word Class Notes
+            </h2>
+            <p className="text-sm">Content of Word class notes</p>
+            <p className="text-sm">Content of note 4</p>{" "}
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
