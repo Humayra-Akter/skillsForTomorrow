@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 const Navbar = () => {
@@ -14,7 +14,7 @@ const Navbar = () => {
   };
 
   return (
-    <div className="bg-gradient-to-r from-primary to-secondary  text-black font-bold">
+    <div className="bg-gradient-to-r from-primary to-secondary text-black font-bold">
       <div className="navbar sticky">
         <div className="navbar-start">
           <Link to="/"></Link>
@@ -32,14 +32,14 @@ const Navbar = () => {
               <button className="pr-10">Student-Dashboard</button>
             </Link>
           )}
-          {userType === "" && (
-            <Link to="/allJobs">
-              <button className="pr-10">Search-Job</button>
+          {userType === "instructor" && (
+            <Link to="/instructorDashboard">
+              <button className="pr-10">Instructor-Dashboard</button>
             </Link>
           )}
           {loggedInUser ? (
             <button className="pr-10" onClick={handleSignOut}>
-              Signout
+              Sign Out
             </button>
           ) : (
             <Link to="/register">

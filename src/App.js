@@ -8,7 +8,6 @@ import About from "./components/About/About";
 import FreeFeatures from "./components/Features/FreeFeatures";
 import ApplyForJob from "./components/Features/ApplyForJob";
 import BuyerSpecialBasicComputer from "./components/Features/BuyerSpecialBasicComputer";
-import BasicComputer from "./components/Features/BasicComputer";
 import InstructorDashboard from "./components/SellerDashboard/InstructorDashboard";
 import AddInstitution from "./components/SellerDashboard/AddInstitution";
 import JobAnnounce from "./components/SellerDashboard/JobAnnounce";
@@ -37,11 +36,8 @@ function App() {
         <Route path="/yourNotes" element={<YourNotes />} />
 
         <Route path="/freeFeatures" element={<FreeFeatures />} />
-        <Route path="/basicComputer" element={<BasicComputer />} />
-        <Route
-          path="/buyerSpecialBasicComputer"
-          element={<BuyerSpecialBasicComputer />}
-        />
+
+        <Route path="/basicComputer" element={<BuyerSpecialBasicComputer />} />
       </Routes>
       <Footer />
     </div>

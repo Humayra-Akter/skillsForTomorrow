@@ -309,6 +309,108 @@ const StudentDashboard = () => {
           </div>
         </div>
       </div>
+
+      {/* Additional section: Streaks and completed tasks */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+        {/* Longest streak */}
+        <div className="bg-blue-200 p-4 rounded-lg">
+          <h2 className="text-lg font-semibold mb-2">Your Longest Streak</h2>
+          <div className="flex items-center">
+            <div className="w-16 h-16 bg-blue-500 rounded-full flex justify-center items-center text-white font-semibold text-lg mr-2">
+              10
+            </div>
+            <p className="text-sm">Congratulations! Keep going.</p>
+          </div>
+        </div>
+        {/* Current streak and completed tasks */}
+        <div className="bg-green-200 p-4 rounded-lg">
+          <h2 className="text-lg font-semibold mb-2">
+            Your Current Streak and Completed Tasks
+          </h2>
+          <div className="flex flex-col gap-4">
+            <div className="flex items-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex justify-center items-center text-white font-semibold text-lg mr-2">
+                5
+              </div>
+              <p className="text-sm">Keep it up! You're doing great.</p>
+            </div>
+            <div className="flex items-center">
+              <div className="w-16 h-16 bg-green-500 rounded-full flex justify-center items-center text-white font-semibold text-lg mr-2">
+                15
+              </div>
+              <p className="text-sm">
+                Congratulations! You've completed 15 tasks.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Additional section: Daily current affair test */}
+      <div className="bg-gray-100 p-4 rounded-lg mb-8">
+        <h2 className="text-lg font-semibold mb-4">
+          Daily Current Affairs Test
+        </h2>
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          {/* Card 1 */}
+          <div className="bg-blue-400 text-white rounded-lg p-4 flex flex-col justify-between">
+            <div>
+              <p className="text-lg font-semibold mb-2">Daily Test 1</p>
+              <p className="text-sm mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                et elit eget est viverra pretium. Sed vestibulum elit ut magna
+                tincidunt, nec placerat turpis rutrum.
+              </p>
+            </div>
+            <div className="flex justify-between">
+              <button className="bg-white text-blue-500 px-4 py-2 rounded-full">
+                Read
+              </button>
+              <button className="bg-blue-500 text-white px-4 py-2 rounded-full">
+                Attempt
+              </button>
+            </div>
+          </div>
+          {/* Card 2 */}
+          <div className="bg-green-400 text-white rounded-lg p-4 flex flex-col justify-between">
+            <div>
+              <p className="text-lg font-semibold mb-2">Daily Test 2</p>
+              <p className="text-sm mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                et elit eget est viverra pretium. Sed vestibulum elit ut magna
+                tincidunt, nec placerat turpis rutrum.
+              </p>
+            </div>
+            <div className="flex justify-between">
+              <button className="bg-white text-green-500 px-4 py-2 rounded-full">
+                Read
+              </button>
+              <button className="bg-green-500 text-white px-4 py-2 rounded-full">
+                Attempt
+              </button>
+            </div>
+          </div>
+          {/* Card 3 */}
+          <div className="bg-yellow-400 text-white rounded-lg p-4 flex flex-col justify-between">
+            <div>
+              <p className="text-lg font-semibold mb-2">Daily Test 3</p>
+              <p className="text-sm mb-2">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus
+                et elit eget est viverra pretium. Sed vestibulum elit ut magna
+                tincidunt, nec placerat turpis rutrum.
+              </p>
+            </div>
+            <div className="flex justify-between">
+              <button className="bg-white text-yellow-500 px-4 py-2 rounded-full">
+                Read
+              </button>
+              <button className="bg-yellow-500 text-white px-4 py-2 rounded-full">
+                Attempt
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
