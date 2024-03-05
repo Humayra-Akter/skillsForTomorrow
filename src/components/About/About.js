@@ -18,17 +18,40 @@ const About = () => {
         {/* Large text section */}
         <div className="text-lg text-justify mx-28 mb-8">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-            ultricies suscipit consectetur. Sed quis ex dolor. Cras a ex eu
-            massa pellentesque vulputate. Integer nec urna gravida, sollicitudin
-            enim vel, faucibus purus. Vivamus suscipit tellus felis, a dictum
-            dolor tincidunt eget. Curabitur ac urna non justo malesuada
-            volutpat. Sed dignissim libero ut nisl condimentum, a suscipit lacus
-            scelerisque. Nam fermentum, risus id fermentum varius, ligula velit
-            convallis odio, at lobortis purus urna vitae mi. Nulla efficitur
-            urna id neque finibus, ac congue lorem interdum. Sed suscipit, justo
-            at rutrum venenatis, ex nunc fringilla ligula, nec bibendum felis
-            nunc at ipsum.
+            In Bangladesh, the journey to education is fraught with obstacles
+            for many children, particularly those from marginalized backgrounds.
+            The National Curriculum and Textbook Board (NCTB), tasked with
+            providing education to all, often falls short in addressing the
+            diverse needs of students. This inadequacy is especially pronounced
+            in vocational education, where a one-size-fits-all approach
+            perpetuates cycles of poverty and limits opportunities for upward
+            mobility. Compounding these challenges are the efforts of
+            non-governmental organizations (NGOs), which primarily focus on
+            short-term interventions. While these interventions may offer
+            temporary relief, they often fail to bring about sustainable,
+            long-lasting change in the lives of children. This is particularly
+            concerning in a country where societal taboos and norms add another
+            layer of complexity, especially for children growing up in brothels
+            or on the streets. These norms further marginalize them and make it
+            increasingly challenging for girls to lead decent lives.
+          </p>
+        </div>
+        <div className="text-lg text-justify mx-28 mb-8">
+          <p>
+            Collaboration with NGOs is another crucial aspect of the hub-based
+            schooling system. By leveraging the expertise and resources of
+            existing organizations, the initiative can amplify its impact and
+            reach more marginalized children. This collaborative approach
+            ensures that no child is left behind and that support is provided
+            where it is most needed. In conclusion, the hub-based schooling
+            system represents a beacon of hope for marginalized children in
+            Bangladesh. By addressing the educational challenges and social
+            barriers they face, this initiative seeks to empower them with the
+            tools and opportunities they need to build a better future. Through
+            a combination of innovative pedagogy, community engagement, and
+            sustainable funding, the hub-based schooling system strives to break
+            the cycle of disadvantage and unlock the potential of every child,
+            regardless of their background or circumstances.
           </p>
         </div>
         {/* Image and text rows */}
@@ -43,14 +66,18 @@ const About = () => {
             </div>
             <div className="text-justify items-center justify-center ">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                ultricies suscipit consectetur. Sed quis ex dolor. Cras a ex eu
-                massa pellentesque vulputate. Integer nec urna gravida,
-                sollicitudin enim vel, faucibus purus. Vivamus suscipit tellus
-                felis, a dictum dolor tincidunt eget. Curabitur ac purus urna
-                vitae mi. Nulla efficitur urna id neque finibus, ac congue lorem
-                interdum. Sed suscipit, justo at rutrum venenatis, ex nunc
-                fringilla ligula, nec bibendum felis nunc at ipsum.
+                The confluence of inadequate educational systems, short-term NGO
+                interventions, and entrenched social taboos creates significant
+                barriers for children, particularly girls, in accessing
+                opportunities and leading fulfilling lives. However, amidst
+                these challenges lies an opportunity for innovative solutions
+                that can uplift and empower marginalized children across
+                Bangladesh. One such solution is the establishment of a
+                hub-based schooling system. This initiative targets more than 2
+                lakh marginalized children in Bangladesh, with a focus on those
+                between 5-9 and 9-14 years old. These are the formative years
+                where children are most vulnerable to the adverse effects of
+                poverty, societal norms, and inadequate education.
               </p>
             </div>
           </div>
@@ -61,14 +88,19 @@ const About = () => {
           >
             <div className="text-justify">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                ultricies suscipit consectetur. Sed quis ex dolor. Cras a ex eu
-                massa pellentesque vulputate. Integer nec urna gravida,
-                sollicitudin enim vel, faucibus purus. Vivamus suscipit tellus
-                felis, a dictum dolor tincidunt eget. Curabitur ac purus urna
-                vitae mi. Nulla efficitur urna id neque finibus, ac congue lorem
-                interdum. Sed suscipit, justo at rutrum venenatis, ex nunc
-                fringilla ligula, nec bibendum felis nunc at ipsum.
+                The hub-based schooling system aims to break the cycle of
+                disadvantage by providing skill-based education tailored to the
+                needs of marginalized children. By establishing centralized
+                educational hubs in strategic locations, this approach ensures
+                that resources and expertise are effectively allocated to reach
+                those who need it the most. These hubs not only offer basic
+                primary education but also equip children with essential skills
+                for a better future. In practical terms, each hub accommodates a
+                project serving 35 students. The educational content is
+                delivered through a combination of video lessons, animation
+                graphics, and embedded AI on a dedicated website. This
+                multimedia approach not only enhances engagement but also caters
+                to different learning styles and abilities.
               </p>
             </div>
             <div className="rounded-lg items-center justify-center flex overflow-hidden">
@@ -85,14 +117,20 @@ const About = () => {
             </div>
             <div className="text-justify">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                ultricies suscipit consectetur. Sed quis ex dolor. Cras a ex eu
-                massa pellentesque vulputate. Integer nec urna gravida,
-                sollicitudin enim vel, faucibus purus. Vivamus suscipit tellus
-                felis, a dictum dolor tincidunt eget. Curabitur ac purus urna
-                vitae mi. Nulla efficitur urna id neque finibus, ac congue lorem
-                interdum. Sed suscipit, justo at rutrum venenatis, ex nunc
-                fringilla ligula, nec bibendum felis nunc at ipsum.
+                To ensure the smooth functioning of each hub, a team of
+                instructors comprising Bangladesh university students and local
+                volunteers is recruited. These instructors play a pivotal role
+                in delivering lessons, providing support, and fostering a
+                conducive learning environment. Moreover, the involvement of
+                local volunteers, mainly college students, strengthens community
+                engagement and ownership of the initiative. The curriculum of
+                the hub-based schooling system is divided into two modules: one
+                for children aged 5-9 and another for those aged 9-14. Each
+                module combines basic primary education with skill-based
+                learning, with a focus on marketable skills that can enhance the
+                children's future prospects. Additionally, a performance tracker
+                is implemented to identify each child's strengths and areas for
+                improvement, enabling personalized learning and support.
               </p>
             </div>
           </div>
@@ -103,14 +141,19 @@ const About = () => {
           >
             <div className="text-justify">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                ultricies suscipit consectetur. Sed quis ex dolor. Cras a ex eu
-                massa pellentesque vulputate. Integer nec urna gravida,
-                sollicitudin enim vel, faucibus purus. Vivamus suscipit tellus
-                felis, a dictum dolor tincidunt eget. Curabitur ac purus urna
-                vitae mi. Nulla efficitur urna id neque finibus, ac congue lorem
-                interdum. Sed suscipit, justo at rutrum venenatis, ex nunc
-                fringilla ligula, nec bibendum felis nunc at ipsum.
+                In terms of funding, the initiative adopts a multi-pronged
+                approach. Seed money is collected through fundraising efforts,
+                with collaborations sought from the government and corporate
+                sectors. Additionally, the hub-based schooling system generates
+                revenue by selling skill-based courses through its website,
+                leveraging this as a unique selling proposition (USP) to sustain
+                its operations. Looking ahead, the vision for the hub-based
+                schooling system extends beyond the pilot phase. The goal is to
+                establish 21 hubs across the nation within the next three years,
+                reaching 10,000 children with the support of over 100
+                instructors. This ambitious expansion plan reflects the
+                commitment to scale up and replicate the success of the
+                initiative nationwide.
               </p>
             </div>
             <div className="rounded-lg items-center justify-center flex overflow-hidden">
@@ -127,14 +170,20 @@ const About = () => {
             </div>
             <div className="text-justify">
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
-                ultricies suscipit consectetur. Sed quis ex dolor. Cras a ex eu
-                massa pellentesque vulputate. Integer nec urna gravida,
-                sollicitudin enim vel, faucibus purus. Vivamus suscipit tellus
-                felis, a dictum dolor tincidunt eget. Curabitur ac purus urna
-                vitae mi. Nulla efficitur urna id neque finibus, ac congue lorem
-                interdum. Sed suscipit, justo at rutrum venenatis, ex nunc
-                fringilla ligula, nec bibendum felis nunc at ipsum.
+                In addition to providing education, the hub-based schooling
+                system incorporates various support mechanisms to address the
+                holistic needs of marginalized children. This includes offering
+                meals, snacks, and other forms of nourishment to ensure their
+                physical well-being. Furthermore, special provisions are made to
+                provide free education for children from brothels, recognizing
+                their unique challenges and vulnerabilities. The initiative also
+                emphasizes the importance of co-curricular activities and
+                community building. Children are encouraged to participate in
+                activities such as math Olympiads and debates, with the aim of
+                nurturing their talents and building their confidence.
+                Additionally, the establishment of an online community allows
+                children to showcase their achievements, fostering a sense of
+                pride and belonging.
               </p>
             </div>
           </div>

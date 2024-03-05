@@ -9,7 +9,7 @@ const AllInstructors = () => {
   const instructors = [
     {
       id: 1,
-      name: "John Doe",
+      name: "Humayra Akter",
       designation: "Chef Instructor",
       location: "Puran Dhaka, Dhaka",
       module: "Cooking",
@@ -22,7 +22,7 @@ const AllInstructors = () => {
     },
     {
       id: 2,
-      name: "Jane Smith",
+      name: "Aunindya Prosad Shaha",
       designation: "IT Trainer",
       location: "Bidda niketon, Rajshahi",
       module: "Basic Computer",
@@ -35,7 +35,7 @@ const AllInstructors = () => {
     },
     {
       id: 3,
-      name: "Michael Johnson",
+      name: "Maisha Tabassum",
       designation: "Art Instructor",
       location: "Jamuna par, Cumilla",
       module: "Art and Craft",
@@ -48,7 +48,7 @@ const AllInstructors = () => {
     },
     {
       id: 4,
-      name: "Emily Brown",
+      name: "Fahmida Sultana",
       designation: "Beauty Therapist",
       location: "Shagordari, Joshor",
       module: "Hairdressing and Beauty Therapy",
@@ -61,7 +61,7 @@ const AllInstructors = () => {
     },
     {
       id: 5,
-      name: "David Clark",
+      name: "Istiaque Ahmed Arik",
       designation: "Plumbing Instructor",
       location: "Amtola, Dhaka",
       module: "Electrical and Plumbing Skills",
