@@ -4,8 +4,11 @@ import img2 from "../../images/2.jpg";
 import img3 from "../../images/3.jpg";
 import img4 from "../../images/4.jpg";
 import img5 from "../../images/5.jpg";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
+  AOS.init();
   return (
     <div className=" py-20">
       <div className="container mx-auto px-4">
@@ -31,7 +34,10 @@ const About = () => {
         {/* Image and text rows */}
         <div className="grid grid-cols-1 mx-16 p-10 gap-8">
           {/* First row */}
-          <div className="grid bg-pink-200 h-80 p-10 lg:grid-cols-2 gap-10 items-center">
+          <div
+            data-aos="fade-right"
+            className="grid bg-pink-200 h-80 p-10 lg:grid-cols-2 gap-10 items-center"
+          >
             <div className="rounded-lg overflow-hidden items-center justify-center flex sm:mb-0">
               <img src={img1} alt="Image 1" className="h-auto w-96" />
             </div>
@@ -49,7 +55,10 @@ const About = () => {
             </div>
           </div>
           {/* Second row */}
-          <div className="grid bg-green-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center">
+          <div
+            data-aos="fade-left"
+            className="grid bg-green-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center"
+          >
             <div className="text-justify">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -67,7 +76,10 @@ const About = () => {
             </div>
           </div>
           {/* Third row */}
-          <div className="grid bg-amber-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center">
+          <div
+            data-aos="fade-right"
+            className="grid bg-amber-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center"
+          >
             <div className="rounded-lg  items-center justify-center flex overflow-hidden mb-4 sm:mb-0">
               <img src={img3} alt="Image 3" className="w-96 h-auto" />
             </div>
@@ -85,7 +97,10 @@ const About = () => {
             </div>
           </div>
           {/* Fourth row */}
-          <div className="grid bg-fuchsia-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center">
+          <div
+            data-aos="fade-left"
+            className="grid bg-fuchsia-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center"
+          >
             <div className="text-justify">
               <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer
@@ -103,7 +118,10 @@ const About = () => {
             </div>
           </div>
           {/* Fifth row */}
-          <div className="grid bg-sky-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center">
+          <div
+            data-aos="fade-right"
+            className="grid bg-sky-200 p-10 h-80 lg:grid-cols-2 gap-10 items-center"
+          >
             <div className="rounded-lg  items-center justify-center flex overflow-hidden mb-4 sm:mb-0">
               <img src={img5} alt="Image 5" className="w-96 h-auto" />
             </div>
@@ -156,12 +174,14 @@ const About = () => {
                     placeholder="Enter your question here"
                   ></textarea>
                 </div>
-                <button
-                  type="submit"
-                  className="bg-primary text-white py-2 px-4 rounded-md hover:bg-secondary transition duration-300"
-                >
-                  Submit
-                </button>
+                <div className="flex items-center justify-end">
+                  <button
+                    type="submit"
+                    className="bg-primary w-40 font-bold text-white py-2 px-4 uppercase rounded-md hover:bg-secondary hover:text-black transition duration-300"
+                  >
+                    Submit
+                  </button>
+                </div>
               </form>
             </div>
           </div>

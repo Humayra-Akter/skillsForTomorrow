@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 
 const BuyerSpecialBasicComputer = () => {
   const [wordClasses, setWordClasses] = useState([]);
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const { userType } = loggedInUser || {};
 
   useEffect(() => {
     fetch("./basicComputer.json")
