@@ -159,7 +159,12 @@ const formatModuleName = (moduleName) => {
 };
 
 const FreeFeatures = () => {
+  const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
+  const { userType } = loggedInUser || {};
   const navigate = useNavigate();
+  if (!loggedInUser) {
+    navigate("/login");
+  }
   const renderModule = (modules) => {
     const handleClick = (moduleName) => {
       const formattedName = moduleName.replace(/\s+/g, "_").toLowerCase();

@@ -1,15 +1,17 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
   const { userType } = loggedInUser || {};
+  const navigate = useNavigate();
 
   const handleSignOut = () => {
     const confirmSignOut = window.confirm("Are you sure you want to sign out?");
     if (confirmSignOut) {
       localStorage.removeItem("loggedInUser");
-      window.location.reload();
+      // window.location.reload();
+      navigate("/");
     }
   };
 

@@ -198,13 +198,9 @@ const Modules = () => {
             <div
               className="p-2 h-56 rounded-md overflow-hidden relative"
               style={{
-                backgroundImage: `url(${bg})`,
-                backgroundSize: "cover",
+                backgroundColor: generateRandomColor(),
+                transition: generateRandomColorWithDuration(10),
               }}
-              // style={{
-              //   backgroundColor: generateRandomColor(),
-              //   transition: generateRandomColorWithDuration(10),
-              // }}
             >
               <button
                 className={`text-black font-bold ${
