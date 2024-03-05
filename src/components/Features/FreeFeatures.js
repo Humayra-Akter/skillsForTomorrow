@@ -1,5 +1,6 @@
 import React from "react";
 import { FaCircle } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const modules1 = {
   Cooking: {
@@ -157,45 +158,55 @@ const formatModuleName = (moduleName) => {
     .join(" ");
 };
 
-const renderModule = (modules) => (
-  <div className="container mx-auto flex justify-center mb-6">
-    <div className="flex flex-wrap gap-16">
-      {Object.entries(modules).map(([feature, { submodule }]) => (
-        <div key={feature}>
-          <div className="bg-emerald-50 border-2 rounded-lg shadow-md p-4">
-            <h2 className="text-lg font-bold mb-4 text-center">
-              {formatModuleName(feature)}
-            </h2>
-            {renderSubmoduleCards(submodule)}
+const FreeFeatures = () => {
+  const navigate = useNavigate();
+  const renderModule = (modules) => {
+    const handleClick = (moduleName) => {
+      const formattedName = moduleName.replace(/\s+/g, "_").toLowerCase();
+      navigate(`/${formattedName}`);
+    };
+
+    return (
+      <div className="container mx-auto flex justify-center mb-6">
+        <div className="flex flex-wrap gap-16">
+          {Object.entries(modules).map(([feature, { submodule }]) => (
+            <div
+              key={feature}
+              className="bg-emerald-50 border-2 rounded-lg shadow-md p-4 cursor-pointer"
+              onClick={() => handleClick(feature)}
+            >
+              <h2 className="text-lg font-bold mb-4 text-center">
+                {formatModuleName(feature)}
+              </h2>
+              {renderSubmoduleCards(submodule)}
+            </div>
+          ))}
+        </div>
+      </div>
+    );
+  };
+
+  const renderSubmoduleCards = (submodule) => (
+    <div className="grid grid-cols-1 gap-4">
+      {submodule.map(({ name, relevantCourses }) => (
+        <div
+          key={name}
+          className="bg-gray-100 border-2 border-gray-400\ w-96 rounded-lg p-4"
+        >
+          <div className="flex items-center mb-2">
+            <FaCircle className="text-accent mr-2" />
+            <p className="font-bold">{name}</p>
           </div>
+          <ul className="list-disc ml-6">
+            {relevantCourses.map((course, index) => (
+              <li key={index}>{course}</li>
+            ))}
+          </ul>
         </div>
       ))}
     </div>
-  </div>
-);
+  );
 
-const renderSubmoduleCards = (submodule) => (
-  <div className="grid grid-cols-1 gap-4">
-    {submodule.map(({ name, relevantCourses }) => (
-      <div
-        key={name}
-        className="bg-gray-100 border-2 border-gray-400\ w-96 rounded-lg p-4"
-      >
-        <div className="flex items-center mb-2">
-          <FaCircle className="text-accent mr-2" />
-          <p className="font-bold">{name}</p>
-        </div>
-        <ul className="list-disc ml-6">
-          {relevantCourses.map((course, index) => (
-            <li key={index}>{course}</li>
-          ))}
-        </ul>
-      </div>
-    ))}
-  </div>
-);
-
-const FreeFeatures = () => {
   return (
     <div>
       <h1 className="text-4xl text-center font-bold text-primary mt-7 mb-16">
