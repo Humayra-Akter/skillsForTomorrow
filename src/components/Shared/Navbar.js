@@ -1,5 +1,6 @@
 import React from "react";
 import { Link, useNavigate } from "react-router-dom";
+import logo from "../../images/logo.png";
 
 const Navbar = () => {
   const loggedInUser = JSON.parse(localStorage.getItem("loggedInUser"));
@@ -19,7 +20,9 @@ const Navbar = () => {
     <div className="bg-gradient-to-r from-primary to-secondary text-black font-bold">
       <div className="navbar sticky">
         <div className="navbar-start">
-          <Link to="/"></Link>
+          <Link to="/">
+            <img src={logo} className="w-20" />
+          </Link>
         </div>
 
         <div className="navbar-end pr-10">
@@ -28,6 +31,9 @@ const Navbar = () => {
           </Link>
           <Link className="pr-10" to="/about">
             <button>About</button>
+          </Link>
+          <Link className="pr-10" to="/chat">
+            <button>Chat</button>
           </Link>
           {userType === "student" && (
             <Link to="/studentDashboard">
