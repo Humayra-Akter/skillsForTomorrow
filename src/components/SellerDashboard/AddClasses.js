@@ -79,7 +79,7 @@ const AddClasses = () => {
 
   return (
     <div className="flex items-center justify-center">
-      <div className="max-w-4xl mx-auto border-2 bg-white rounded-md shadow-lg my-8 p-4">
+      <div className="max-w-4xl mx-auto border-2 bg-pink-50 rounded-md shadow-lg my-8 p-4">
         <h2 className="text-2xl mb-4 text-center text-primary font-bold">
           Add Classes
         </h2>

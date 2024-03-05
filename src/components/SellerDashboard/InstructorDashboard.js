@@ -9,8 +9,8 @@ const InstructorDashboard = () => {
           <Link to="/instructorDashboard">
             <button className="pr-10 uppercase mt-3">Add-Classes</button>
           </Link>
-          <Link to="/instructorDashboard/jobAnnounce">
-            <button className="uppercase mt-3">Announce-Job</button>
+          <Link to="/instructorDashboard/allInstructors">
+            <button className="uppercase mt-3">All-Instructors</button>
           </Link>
         </div>
       </div>

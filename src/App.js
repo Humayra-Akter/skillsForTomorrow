@@ -9,10 +9,10 @@ import FreeFeatures from "./components/Features/FreeFeatures";
 import ApplyForJob from "./components/Features/ApplyForJob";
 import BuyerSpecialBasicComputer from "./components/Features/BuyerSpecialBasicComputer";
 import InstructorDashboard from "./components/SellerDashboard/InstructorDashboard";
-import JobAnnounce from "./components/SellerDashboard/JobAnnounce";
 import StudentDashboard from "./components/Dashboard/StudentDashboard";
 import YourNotes from "./components/Dashboard/YourNotes";
 import AddClasses from "./components/SellerDashboard/AddClasses";
+import AllInstructors from "./components/SellerDashboard/AllInstructors";
 
 function App() {
   return (
@@ -29,7 +29,7 @@ function App() {
         {/* instructor dashboard  */}
         <Route path="/instructorDashboard" element={<InstructorDashboard />}>
           <Route index element={<AddClasses />}></Route>
-          <Route path="jobAnnounce" element={<JobAnnounce />}></Route>
+          <Route path="allInstructors" element={<AllInstructors />}></Route>
         </Route>
 
         <Route path="/studentDashboard" element={<StudentDashboard />} />
