@@ -29,6 +29,9 @@ const Navbar = () => {
           <Link className="pr-10" to="/about">
             <button>About</button>
           </Link>
+          <Link className="pr-10" to="/chat">
+            <button>Chat</button>
+          </Link>
           {userType === "student" && (
             <Link to="/studentDashboard">
               <button className="pr-10">Student-Dashboard</button>

@@ -13,6 +13,7 @@ import StudentDashboard from "./components/Dashboard/StudentDashboard";
 import YourNotes from "./components/Dashboard/YourNotes";
 import AddClasses from "./components/SellerDashboard/AddClasses";
 import AllInstructors from "./components/SellerDashboard/AllInstructors";
+import Chat from "./components/Chat/Chat";
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
         <Route path="/about" element={<About />} />
+        <Route path="/chat" element={<Chat />} />
         <Route path="/applyForJob/:jobId" element={<ApplyForJob />} />
 
         <Route path="/instructorDashboard" element={<InstructorDashboard />} />
